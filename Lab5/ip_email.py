@@ -15,7 +15,8 @@ connection = engine.connect()
 request = 'SELECT DISTINCT ip_address from access_logs'
 ips = connection.execute(request)
 
-body = 'Unique ips: \n"+", '.join(map(lambda row: row['ip_address'],ips))
+#body = 'Unique ips: \n"+", '.join(map(lambda row: row['ip_address'],ips))
+body = "Hello world!!!"
 
 message = MIMEMultipart("alternative")
 message["Subject"] = subject
@@ -23,8 +24,6 @@ message["From"] = email
 message["To"] = receiver
 message.attach(MIMEText(body, "plain"))
 
-print(email)
-print(password)
 context = create_default_context()
 with SMTP_SSL("smtp.gmail.com", 465, context = context) as server:
     server.login(email, password)
