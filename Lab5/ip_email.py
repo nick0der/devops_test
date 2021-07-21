@@ -17,7 +17,6 @@ request = 'SELECT DISTINCT ip_address from access_logs'
 ips = connection.execute(request)
 
 body = 'Unique ips: \n"+", '.join(map(lambda row: row['ip_address'],ips))
-body = "Hello world!!!"
 
 message = MIMEMultipart("alternative")
 message["Subject"] = subject
