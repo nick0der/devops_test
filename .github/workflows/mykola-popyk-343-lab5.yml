@@ -29,4 +29,4 @@ jobs:
 
       - name: Send data wia email
         run:
-          python Lab5/ip_email.py mykolarpopyk@gmail.com
+          python Lab5/ip_email.py olexiy.jakivtchik@gmail.com
