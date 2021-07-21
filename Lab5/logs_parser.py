@@ -1,7 +1,6 @@
 import sys
 import re
 import time
-from flask_sqlalchemy import sqlalchemy
 from datetime import datetime
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, DateTime
 

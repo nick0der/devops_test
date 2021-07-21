@@ -1,9 +1,8 @@
 import sys
-from flask_sqlalchemy import sqlalchemy
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL
-from sqalchemy import create_engine
+from sqlalchemy import create_engine
 from ssl import create_default_context
 from variables import email, password
 
