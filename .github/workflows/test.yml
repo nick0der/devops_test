@@ -1,4 +1,4 @@
-name: Mykola-Popyk-343-Lab5
+name: TEST
 
 on:
   workflow_dispatch:
