@@ -10,10 +10,10 @@ file = sys.argv[1]
 receiver = sys.argv[2]
 subject = 'Mykola-Popyk-343 Lab5'
 
-engine = create_engine('sqlite:///{}'.format(file), echo = False)
-connection = engine.connect()
-request = 'SELECT DISTINCT ip_address from access_logs'
-ips = connection.execute(request)
+#engine = create_engine('sqlite:///{}'.format(file), echo = False)
+#connection = engine.connect()
+#request = 'SELECT DISTINCT ip_address from access_logs'
+#ips = connection.execute(request)
 
 #body = 'Unique ips: \n"+", '.join(map(lambda row: row['ip_address'],ips))
 body = "Hello world!!!"
@@ -29,4 +29,4 @@ with SMTP_SSL("smtp.gmail.com", 465, context = context) as server:
     server.login(email, password)
     server.sendmail(email, receiver, message.as_string())
 
-connection.close()
+#connection.close()
