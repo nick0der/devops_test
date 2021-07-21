@@ -23,6 +23,8 @@ message["From"] = email
 message["To"] = receiver
 message.attach(MIMEText(body, "plain"))
 
+print(email)
+print(password)
 context = create_default_context()
 with SMTP_SSL("smtp.gmail.com", 465, context = context) as server:
     server.login(email, password)
