@@ -16,7 +16,7 @@ connection = engine.connect()
 request = 'SELECT DISTINCT ip_address from access_logs'
 ips = connection.execute(request)
 
-body = 'Unique ips: \n"+", '.join(map(lambda row: row['ip_address'],ips))
+body = 'Unique ips: \n' + '\n '.join(map(lambda row: row['ip_address'],ips))
 
 message = MIMEMultipart("alternative")
 message["Subject"] = subject
