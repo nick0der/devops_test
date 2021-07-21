@@ -25,7 +25,7 @@ message["To"] = receiver
 message.attach(MIMEText(body, "plain"))
 
 context = create_default_context()
-with SMTP_SSL("smtp.googlemail.com", 465, context = context) as server:
+with SMTP_SSL("smtp.gmail.com", 587, context = context) as server:
     server.login(email, password)
     server.sendmail(email, receiver, message.as_string())
 
